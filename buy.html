@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy Now</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <section style="padding: 3em;">
+    <div class="buy-contact">
+      <h1 style="text-align: center;">Payment</h1>
+      <form class="row">
+        <div class="col-md-6">
+          <label for="name" class="form-label" style="padding-top: 1em;">Name</label>
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail4" class="form-label" style="padding-top: 1em;">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="col-md-12">
+          <label for="inputAddress" class="form-label" style="padding-top: 1em;">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+        </div>
+        <div class="col-md-4">
+          <label for="inputnum" class="form-label" style="padding-top: 1em;">Contact No.</label>
+          <input type="tel" class="form-control" id="inputnum">
+        </div>
+        <div class="col-md-3">
+          <label for="inputCity" class="form-label" style="padding-top: 1em;">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-3">
+          <label for="inputState" class="form-label" style="padding-top: 1em;">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>Karnataka</option>
+            <option>Maharastra</option>
+            <option>Tamilnadu</option>
+            <option>Other state</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label" style="padding-top: 1em;">Zip/Pin Code</label>
+          <input type="number" class="form-control" id="inputZip">
+        </div>
+        <h5 style="padding-top: 2em;">Payment Mode
+          <div class="pay-icons">
+            <i class="fa fa-cc-paypal" style="font-size:30px"></i>
+            <i class="fa fa-cc-mastercard" style="font-size:30px"></i>
+            <i class="fa fa-cc-visa" style="font-size:30px"></i>
+          </div>
+        </h5>
+        <div>
+          <p style="font-weight: bold; padding-top: 1em;" id="button1">UPI Payment</p>
+          <div class="mb-2 row" id="button1-c" style="display:none;">
+            <label for="inputId" class="col-sm-2 col-form-label">UPI Id</label>
+            <div class="col-sm-3">
+              <input type="email" class="form-control" id="inputId">
+            </div>
+          </div>
+          <p style="font-weight: bold; padding-top: 1em;" id="button2">Debit/Credit Card</p>
+          <div id="button2-c" style="display:none;">
+            <div class="mb-2 row">
+              <label for="inputname" class="col-sm-2 col-form-label">Card Holder Name</label>
+              <div class="col-sm-3">
+                <input type="text" class="form-control" id="inputname">
+              </div>
+            </div>
+            <div class="mb-2 row">
+              <label for="inputNo" class="col-sm-2 col-form-label">Card Number</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="inputNo">
+              </div>
+            </div>
+            <div class="mb-2 row">
+              <label for="inputexpiry" class="col-sm-2 col-form-label">Expiry</label>
+              <div class="col-sm-3">
+                <input type="month" class="form-control" id="inputexpiry">
+              </div>
+            </div>
+            <div class="mb-2 row">
+              <label for="inputNo" class="col-sm-2 col-form-label">CVV</label>
+              <div class="col-sm-3">
+                <input type="number" class="form-control" id="inputNo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("button1").addEventListener("click", function() {
+      document.getElementById("button1-c").style.display = "block";
+      document.getElementById("button2-c").style.display = "none";
+    });
+    
+    document.getElementById("button2").addEventListener("click", function() {
+      document.getElementById("button2-c").style.display = "block";
+      document.getElementById("button1-c").style.display = "none";  
+    });
+    </script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
