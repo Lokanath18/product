@@ -3,10 +3,12 @@ html {
   padding-right: 0.2em;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .my-nav {
   padding: 0.5em;
-  padding-left: 6.5em;
-  padding-right: 5em;
   background-color: rgb(12, 92, 168);
   font-weight: bold;
 }
@@ -18,7 +20,7 @@ html {
   background-color: white;
 }
 .my-nav .my-menu img {
-  width: 50px;
+  width: 30px;
 }
 
 .home-ac img {
@@ -70,8 +72,8 @@ html {
 }
 
 .image-collection .img-front {
-  height: 40px;
-  width: 100px;
+  height: 90px;
+  width: 230px;
 }
 .image-collection .img-f {
   height: 100%;
@@ -181,8 +183,21 @@ html {
   html {
     padding: 0;
   }
+  body {
+    overflow-x: hidden;
+  }
   .my-nav {
     padding: 0;
+    position: relative;
+  }
+  .my-nav .navbar-brand a {
+    padding-right: 10px;
+  }
+  .my-nav .navbar-toggler {
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    transform: scaleX(-1);
   }
   .product img {
     height: 100%;
@@ -228,5 +243,36 @@ html {
   .my-foot {
     display: flex;
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 680px) {
+  .my-nav {
+    padding: 0;
+    position: relative;
+  }
+  .my-nav .navbar-brand a {
+    padding-right: 10px;
+  }
+  .my-nav .navbar-toggler {
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    transform: scaleX(-1);
+  }
+}
+@media only screen and (min-width: 980px) {
+  .my-nav .navbar-nav {
+    padding-left: 10em;
+  }
+  .my-nav .navbar-brand img {
+    padding-left: 10px;
+  }
+  .my-nav form {
+    padding-right: 10px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .my-nav .navbar-nav {
+    padding-left: 20em;
   }
 }/*# sourceMappingURL=main.css.map */
